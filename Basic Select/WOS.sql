@@ -4,6 +4,7 @@ SELECT city,state FROM station;
 -- ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Weather Observation Station 3
+-- (The MOD() function returns the remainder of a number divided by another number)
 SELECT DISTINCT city FROM station
 WHERE MOD(station.id, 2) = 0;
 
