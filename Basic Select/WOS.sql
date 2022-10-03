@@ -1,15 +1,16 @@
 -- Weather Observation Station 1
-Select CITY, STATE From STATION WHERE LAT_N >= 0 AND LONG_W >= 0;
+SELECT city,state FROM station;
 
 -- ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Weather Observation Station 3
-Select DISTINCT CITY From STATION WHERE ID % 2 = 0;
+SELECT DISTINCT city FROM station
+WHERE MOD(station.id, 2) = 0;
 
 -- ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Weather Observation Station 4
-Select Count(*) - Count(DISTINCT CITY)  From STATION
+SELECT COUNT(city) - COUNT(DISTINCT city) FROM station;
 
 -- ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
